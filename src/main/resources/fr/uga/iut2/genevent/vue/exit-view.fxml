@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox fx:controller="fr.uga.iut2.genevent.controleur.ExitControleur" alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="225.0" prefWidth="345.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" text="Quitter l'application ?">
+         <font>
+            <Font name="Inter Semi Bold" size="22.0" />
+         </font>
+         <VBox.margin>
+            <Insets top="50.0" />
+         </VBox.margin>
+      </Label>
+      <Label text="Les modifications seront sauvegardées.">
+         <opaqueInsets>
+            <Insets top="15.0" />
+         </opaqueInsets>
+         <VBox.margin>
+            <Insets top="15.0" />
+         </VBox.margin>
+      </Label>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Button fx:id="btnAnnuler" mnemonicParsing="false" onAction="#btnAnnulerClicked" prefHeight="50.0" prefWidth="103.0" style="-fx-background-color: FFFFFF; -fx-border-color: black; -fx-border-radius: 6;" styleClass="buttonAnnuler" stylesheets="@exit-view.css" text="Annuler">
+               <HBox.margin>
+                  <Insets right="7.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="Inter Semi Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnQuitter" cancelButton="true" mnemonicParsing="false" onAction="#btnQuitterClicked" prefHeight="50.0" prefWidth="103.0" style="-fx-background-radius: 6;" styleClass="buttonQuitter" stylesheets="@exit-view.css" text="Quitter" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Inter Semi Bold" size="13.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="7.0" />
+               </HBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+         </children>
+      </HBox>
+   </children>
+</VBox>

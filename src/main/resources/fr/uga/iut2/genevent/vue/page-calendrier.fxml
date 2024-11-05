@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<HBox prefHeight="900.0" prefWidth="1680.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.uga.iut2.genevent.controleur.CalendrierControleur">
+   <children>
+      <VBox prefWidth="284.0" style="-fx-background-color: #0B5BB6;">
+         <children>
+            <ImageView fx:id="menuLogoImage1" fitHeight="245.0" fitWidth="256.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/logo_owl-modified.png" /> <!-- Adjusted path -->
+               </image>
+               <VBox.margin>
+                  <Insets bottom="21.0" left="14.0" right="14.0" top="21.0" />
+               </VBox.margin>
+            </ImageView>
+            <VBox prefHeight="483.0" prefWidth="478.0">
+               <children>
+                  <Button fx:id="menuCalendrierButton1" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#menuCalendrierButtonClicked" prefHeight="81.0" prefWidth="258.0" style="-fx-background-color: white;" text="Calendrier" textAlignment="CENTER">
+                     <VBox.margin>
+                        <Insets bottom="12.0" left="13.0" right="13.0" top="12.0" />
+                     </VBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="Inter Regular" size="20.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="menuEvenementsButton1" alignment="CENTER" contentDisplay="CENTER" layoutX="23.0" layoutY="10.0" mnemonicParsing="false" onAction="#menuEvenementsButtonClicked" prefHeight="81.0" prefWidth="258.0" style="-fx-background-color: white;" text="Événements" textAlignment="CENTER">
+                     <VBox.margin>
+                        <Insets bottom="12.0" left="13.0" right="13.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="Inter Regular" size="20.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="menuEmployesButton1" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#menuEmployesButtonClicked" prefHeight="81.0" prefWidth="258.0" style="-fx-background-color: white;" text="Employés" textAlignment="CENTER">
+                     <VBox.margin>
+                        <Insets bottom="12.0" left="13.0" right="13.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="Inter Regular" size="20.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="menuContratsButton1" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="74.0" mnemonicParsing="false" onAction="#menuContratsButtonClicked" prefHeight="81.0" prefWidth="258.0" style="-fx-background-color: white;" text="Contrats" textAlignment="CENTER">
+                     <VBox.margin>
+                        <Insets bottom="12.0" left="13.0" right="13.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="Inter Regular" size="20.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="menuPrestationsButton1" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="100.0" mnemonicParsing="false" onAction="#menuPrestationsButtonClicked" prefHeight="81.0" prefWidth="258.0" style="-fx-background-color: white;" text="Prestations" textAlignment="CENTER">
+                     <VBox.margin>
+                        <Insets bottom="12.0" left="13.0" right="13.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="Inter Regular" size="20.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="289.0" prefWidth="284.0">
+               <children>
+                  <Button fx:id="menuAideButton1" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefWidth="178.0" style="-fx-background-color: none;" text="Aide" textAlignment="CENTER" textFill="WHITE" underline="true">
+                     <VBox.margin>
+                        <Insets bottom="19.0" left="53.0" right="53.0" top="19.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="menuSauvegarderButton" alignment="CENTER" contentDisplay="CENTER" layoutX="23.0" layoutY="10.0" mnemonicParsing="false" onAction="#menuSauvegarderButtonCliked" prefHeight="58.0" prefWidth="178.0" style="-fx-background-color: white; -fx-background-radius: 6;" text="Sauvegarder" textAlignment="CENTER">
+                     <VBox.margin>
+                        <Insets bottom="19.0" left="53.0" right="53.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="Inter Regular" size="16.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="menuQuitterButton1" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="48.0" mnemonicParsing="false" onAction="#menuQuitterButtonClicked" prefHeight="58.0" prefWidth="178.0" style="-fx-background-color: white; -fx-border-color: red; -fx-border-radius: 6; -fx-background-radius: 6;" text="Quitter" textAlignment="CENTER" textFill="RED">
+                     <VBox.margin>
+                        <Insets left="53.0" right="53.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="Inter Regular" size="16.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </VBox>
+         </children>
+      </VBox>
+      <VBox prefHeight="200.0" prefWidth="1636.0">
+         <children>
+            <GridPane prefWidth="1686.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="0.0" prefWidth="283.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="0.0" percentWidth="0.0" prefWidth="347.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="149.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label style="-fx-font-weight: 1000;" text="Calendrier">
+                     <font>
+                        <Font name="Inter Semi Bold" size="40.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="100.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Button fx:id="ajoutRdvButton" alignment="CENTER" mnemonicParsing="false" onAction="#ajoutRdvButtonClicked" prefHeight="57.0" prefWidth="247.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 6;" text="+ Ajouter un rendez-vous" textAlignment="CENTER" GridPane.columnIndex="1">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="Inter Semi Bold" size="16.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="ajoutObsequesButton" alignment="CENTER" mnemonicParsing="false" onAction="#ajoutObsequesButtonClicked" prefHeight="57.0" prefWidth="247.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 6;" text="+ Ajouter des obsèques" GridPane.columnIndex="2">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="Inter Semi Bold" size="16.0" />
+                     </font>
+                  </Button>
+               </children>
+            </GridPane>
+            <GridPane gridLinesVisible="true" prefHeight="708.0" prefWidth="1196.0">
+              <columnConstraints>
+                <ColumnConstraints fx:id="jourColumn1" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints fx:id="jourColumn2" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints fx:id="jourColumn3" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints fx:id="jourColumn4" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints fx:id="jourColumn5" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints fx:id="jourColumn6" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints fx:id="jourColumn7" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="56.0" minHeight="10.0" prefHeight="56.0" vgrow="SOMETIMES" />
+                <RowConstraints fx:id="evenementsLine" maxHeight="673.0" minHeight="10.0" prefHeight="652.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label alignment="TOP_CENTER" prefHeight="65.0" prefWidth="206.0" text="Lundi" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <font>
+                        <Font name="Inter Regular" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="numJourLabel1" alignment="BOTTOM_CENTER" layoutX="10.0" layoutY="46.0" prefHeight="65.0" prefWidth="206.0" text="xx" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <font>
+                        <Font name="Inter Regular" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="TOP_CENTER" layoutX="10.0" layoutY="28.0" prefHeight="65.0" prefWidth="206.0" text="Mardi" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <font>
+                        <Font name="Inter Regular" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="numJourLabel2" alignment="BOTTOM_CENTER" layoutX="10.0" layoutY="28.0" prefHeight="65.0" prefWidth="206.0" text="xx" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <font>
+                        <Font name="Inter Regular" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="TOP_CENTER" layoutX="10.0" layoutY="28.0" prefHeight="65.0" prefWidth="206.0" text="Mercredi" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <font>
+                        <Font name="Inter Regular" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="numJourLabel3" alignment="BOTTOM_CENTER" layoutX="10.0" layoutY="28.0" prefHeight="65.0" prefWidth="206.0" text="xx" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <font>
+                        <Font name="Inter Regular" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="TOP_CENTER" layoutX="10.0" layoutY="28.0" prefHeight="65.0" prefWidth="206.0" text="Jeudi" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <font>
+                        <Font name="Inter Regular" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="numJourLabel4" alignment="BOTTOM_CENTER" layoutX="10.0" layoutY="28.0" prefHeight="65.0" prefWidth="206.0" text="xx" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <font>
+                        <Font name="Inter Regular" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="TOP_CENTER" layoutX="10.0" layoutY="28.0" prefHeight="65.0" prefWidth="206.0" text="Vendredi" textAlignment="CENTER" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <font>
+                        <Font name="Inter Regular" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="numJourLabel5" alignment="BOTTOM_CENTER" layoutX="10.0" layoutY="28.0" prefHeight="65.0" prefWidth="206.0" text="xx" textAlignment="CENTER" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <font>
+                        <Font name="Inter Regular" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="TOP_CENTER" layoutX="10.0" layoutY="28.0" prefHeight="65.0" prefWidth="206.0" text="Samedi" textAlignment="CENTER" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <font>
+                        <Font name="Inter Regular" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="numJourLabel6" alignment="BOTTOM_CENTER" layoutX="10.0" layoutY="28.0" prefHeight="65.0" prefWidth="206.0" text="xx" textAlignment="CENTER" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <font>
+                        <Font name="Inter Regular" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="TOP_CENTER" layoutX="10.0" layoutY="28.0" prefHeight="65.0" prefWidth="206.0" text="Dimanche" textAlignment="CENTER" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <font>
+                        <Font name="Inter Regular" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="numJourLabel7" alignment="BOTTOM_CENTER" layoutX="10.0" layoutY="28.0" prefHeight="65.0" prefWidth="206.0" text="xx" textAlignment="CENTER" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <font>
+                        <Font name="Inter Regular" size="24.0" />
+                     </font>
+                  </Label>
+                  <ScrollPane hbarPolicy="NEVER" GridPane.rowIndex="1">
+                     <content>
+                        <VBox fx:id="vBoxLundi" prefHeight="200.0" prefWidth="169.0" />
+                     </content>
+                  </ScrollPane>
+                  <ScrollPane hbarPolicy="NEVER" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <content>
+                        <VBox fx:id="vBoxMardi" prefHeight="200.0" prefWidth="170.0" />
+                     </content>
+                  </ScrollPane>
+                  <ScrollPane hbarPolicy="NEVER" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <content>
+                        <VBox fx:id="vBoxMercredi" prefHeight="200.0" prefWidth="170.0" />
+                     </content>
+                  </ScrollPane>
+                  <ScrollPane hbarPolicy="NEVER" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                     <content>
+                        <VBox fx:id="vBoxJeudi" prefHeight="200.0" prefWidth="170.0" />
+                     </content>
+                  </ScrollPane>
+                  <ScrollPane hbarPolicy="NEVER" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                     <content>
+                        <VBox fx:id="vBoxVendredi" prefHeight="200.0" prefWidth="170.0" />
+                     </content>
+                  </ScrollPane>
+                  <ScrollPane hbarPolicy="NEVER" GridPane.columnIndex="5" GridPane.rowIndex="1">
+                     <content>
+                        <VBox fx:id="vBoxSamedi" prefHeight="200.0" prefWidth="170.0" />
+                     </content>
+                  </ScrollPane>
+                  <ScrollPane hbarPolicy="NEVER" GridPane.columnIndex="6" GridPane.rowIndex="1">
+                     <content>
+                        <VBox fx:id="vBoxDimanche" prefHeight="200.0" prefWidth="170.0" />
+                     </content>
+                  </ScrollPane>
+               </children>
+               <VBox.margin>
+                  <Insets left="100.0" right="100.0" />
+               </VBox.margin>
+            </GridPane>
+            <GridPane alignment="CENTER">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="630.0" minWidth="10.0" prefWidth="630.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="194.0" minWidth="10.0" percentWidth="0.0" prefWidth="141.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="651.0" minWidth="10.0" prefWidth="625.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+               <children>
+                  <Label fx:id="intervalleDatesLabel" alignment="BOTTOM_LEFT" prefHeight="18.0" text="Label" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </Label>
+                  <Button fx:id="semainePrecedenteButton" mnemonicParsing="false" onAction="#semainePrecedenteButtonClicked" prefWidth="146.0" style="-fx-border-radius: 6; -fx-background-color: white; -fx-border-color: black;" text="Semaine précédente" GridPane.halignment="RIGHT" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </Button>
+                  <Button fx:id="semaineSuivanteButton" mnemonicParsing="false" onAction="#semaineSuivanteButtonClicked" prefWidth="146.0" style="-fx-border-radius: 6; -fx-background-color: white; -fx-border-color: black;" text="Semaine suivante" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </Button>
+                  <Button fx:id="moisSuivantButton" mnemonicParsing="false" onAction="#moisSuivantButtonClicked" prefWidth="115.0" style="-fx-border-radius: 6; -fx-background-color: white; -fx-border-color: black;" text="Mois suivant" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets left="168.0" />
+                     </GridPane.margin>
+                  </Button>
+                  <Button fx:id="moisPrecedentButton" mnemonicParsing="false" onAction="#moisPrecedentButtonClicked" prefWidth="115.0" style="-fx-border-radius: 6; -fx-background-color: white; -fx-border-color: black;" text="Mois précédent" GridPane.halignment="RIGHT" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets right="168.0" />
+                     </GridPane.margin>
+                  </Button>
+               </children>
+            </GridPane>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </VBox>
+   </children>
+</HBox>

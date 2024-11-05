@@ -1,0 +1,9 @@
+.buttonQuitter {
+-fx-background-color : #FF0000;
+-fx-border-radius: none;
+}
+
+.buttonAnnuler {
+-fx-background-color : #FFFFFF;
+-fx-border-radius: none;
+}

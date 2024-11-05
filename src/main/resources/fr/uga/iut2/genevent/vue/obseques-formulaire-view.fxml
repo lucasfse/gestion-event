@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<ScrollPane xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.uga.iut2.genevent.controleur.FormulaireObsequeControleur">
+   <content>
+      <AnchorPane prefHeight="1365.0" prefWidth="600.0">
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="1365.0" prefWidth="600.0" style="-fx-background-color: white;">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" text="Obsèques">
+                     <VBox.margin>
+                        <Insets top="30.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="Inter Semi Bold" size="30.0" />
+                     </font>
+                  </Label>
+                  <GridPane prefHeight="1280.0" prefWidth="600.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" percentHeight="0.0" prefHeight="48.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="70.0" minHeight="10.0" percentHeight="0.0" prefHeight="48.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="70.0" minHeight="10.0" percentHeight="0.0" prefHeight="48.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="70.0" minHeight="10.0" percentHeight="0.0" prefHeight="48.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="70.0" minHeight="10.0" percentHeight="0.0" prefHeight="48.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" percentHeight="0.0" prefHeight="48.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="58.19999999999999" minHeight="10.0" percentHeight="0.0" prefHeight="48.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="64.19999999999999" minHeight="10.0" percentHeight="0.0" prefHeight="48.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="200.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" percentHeight="0.0" prefHeight="200.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="200.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="134.39999999999998" minHeight="10.0" percentHeight="0.0" prefHeight="48.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="132.20000000000005" minHeight="10.0" prefHeight="88.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="100.0" minHeight="10.0" prefHeight="75.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <VBox.margin>
+                        <Insets top="30.0" />
+                     </VBox.margin>
+                     <children>
+                        <Label text="N° de contrat">
+                           <GridPane.margin>
+                              <Insets left="50.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font name="Inter Semi Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="comboboxNumContrat" prefWidth="255.0" style="-fx-background-color: white; -fx-border-color: grey; -fx-border-radius: 6;" GridPane.columnIndex="1">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ComboBox>
+                        <Label text="Nom de l'événement" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets left="50.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font name="Inter Semi Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="tfNomEvenement" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets right="45.0" />
+                           </GridPane.margin>
+                           <cursor>
+                              <Cursor fx:constant="TEXT" />
+                           </cursor>
+                        </TextField>
+                        <Label text="Lieu" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets left="50.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font name="Inter Semi Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="tfLieu" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets right="45.0" />
+                           </GridPane.margin>
+                           <cursor>
+                              <Cursor fx:constant="TEXT" />
+                           </cursor>
+                        </TextField>
+                        <Label text="Date" GridPane.rowIndex="3">
+                           <GridPane.margin>
+                              <Insets left="50.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font name="Inter Semi Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <DatePicker fx:id="dateDate" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </DatePicker>
+                        <TextField fx:id="tfHeureDebut" promptText="00:00" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                           <GridPane.margin>
+                              <Insets right="45.0" />
+                           </GridPane.margin>
+                           <cursor>
+                              <Cursor fx:constant="TEXT" />
+                           </cursor>
+                        </TextField>
+                        <Label text="Heure de début" GridPane.rowIndex="4">
+                           <GridPane.margin>
+                              <Insets left="50.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font name="Inter Semi Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label text="Heure de fin" GridPane.rowIndex="5">
+                           <GridPane.margin>
+                              <Insets left="50.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font name="Inter Semi Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="tfHeureFin" promptText="00:00" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                           <GridPane.margin>
+                              <Insets right="45.0" />
+                           </GridPane.margin>
+                           <cursor>
+                              <Cursor fx:constant="TEXT" />
+                           </cursor>
+                        </TextField>
+                        <Label text="Assistant funéraire" GridPane.rowIndex="6">
+                           <GridPane.margin>
+                              <Insets left="50.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font name="Inter Semi Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="comboboxAssistantFuneraire" prefWidth="255.0" promptText="Choisir un employé" style="-fx-background-color: white; -fx-border-color: grey; -fx-border-radius: 6;" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ComboBox>
+                        <Label text="Maitre de cérémonie" GridPane.rowIndex="7">
+                           <GridPane.margin>
+                              <Insets left="50.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font name="Inter Semi Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="comboboxMaitreCeremonie" prefWidth="255.0" promptText="Choisir un employé" style="-fx-background-color: white; -fx-border-color: grey; -fx-border-radius: 6;" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ComboBox>
+                        <Label text="Marbriers" GridPane.halignment="LEFT" GridPane.rowIndex="8" GridPane.valignment="TOP">
+                           <GridPane.margin>
+                              <Insets left="50.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font name="Inter Semi Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="8">
+                           <children>
+                              <ComboBox fx:id="comboboxMarbriers" prefWidth="255.0" promptText="Choisir un employé" style="-fx-background-color: white; -fx-border-color: grey; -fx-border-radius: 6;">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </ComboBox>
+                              <HBox prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Button fx:id="btnAjoutMarbrier" mnemonicParsing="false" onAction="#btnAjoutMarbrierClicked" style="-fx-background-color: white; -fx-border-color: grey; -fx-border-radius: 6;" text="+ Ajouter un employé">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Button>
+                                    <Label fx:id="lbAjoutMarbrier" alignment="CENTER">
+                                       <padding>
+                                          <Insets left="20.0" top="5.0" />
+                                       </padding>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <TableView fx:id="tableviewMarbriers" prefHeight="200.0" prefWidth="200.0">
+                                <columns>
+                                  <TableColumn fx:id="nomMarbriersColumn" prefWidth="130.0" text="Nom" />
+                                    <TableColumn fx:id="prenomMarbriersColumn" prefWidth="125.0" text="Prénom" />
+                                </columns>
+                                 <VBox.margin>
+                                    <Insets bottom="15.0" right="45.0" top="10.0" />
+                                 </VBox.margin>
+                              </TableView>
+                           </children>
+                        </VBox>
+                        <Label text="Porteurs" GridPane.rowIndex="9" GridPane.valignment="TOP">
+                           <GridPane.margin>
+                              <Insets left="50.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font name="Inter Semi Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="9">
+                           <children>
+                              <ComboBox fx:id="comboboxPorteurs" prefWidth="255.0" promptText="Choisir un employé" style="-fx-background-color: white; -fx-border-color: grey; -fx-border-radius: 6;">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </ComboBox>
+                              <HBox prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Button fx:id="btnAjoutPorteur" mnemonicParsing="false" onAction="#btnAjoutPorteurClicked" style="-fx-background-color: white; -fx-border-color: grey; -fx-border-radius: 6;" text="+ Ajouter un employé">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Button>
+                                    <Label fx:id="lbAjoutPorteur" alignment="CENTER">
+                                       <padding>
+                                          <Insets left="20.0" top="5.0" />
+                                       </padding>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <TableView fx:id="tableviewPorteurs" prefHeight="200.0" prefWidth="200.0">
+                                 <columns>
+                                    <TableColumn fx:id="nomPorteursColumn" prefWidth="130.0" text="Nom" />
+                                    <TableColumn fx:id="prenomPorteursColumn" prefWidth="125.0" text="Prénom" />
+                                 </columns>
+                                 <VBox.margin>
+                                    <Insets bottom="15.0" right="45.0" top="10.0" />
+                                 </VBox.margin>
+                              </TableView>
+                           </children>
+                        </VBox>
+                        <Label text="Thanatopracteurs" GridPane.rowIndex="10" GridPane.valignment="TOP">
+                           <GridPane.margin>
+                              <Insets left="50.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font name="Inter Semi Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="10">
+                           <children>
+                              <ComboBox fx:id="comboboxThanatopracteurs" prefWidth="255.0" promptText="Choisir un employé" style="-fx-background-color: white; -fx-border-color: grey; -fx-border-radius: 6;">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </ComboBox>
+                              <HBox prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Button fx:id="btnAjoutThanatopracteur" mnemonicParsing="false" onAction="#btnAjoutThanatopracteurClicked" style="-fx-background-color: white; -fx-border-color: grey; -fx-border-radius: 6;" text="+ Ajouter un employé">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Button>
+                                    <Label fx:id="lbAjoutThanatopracteur" alignment="CENTER">
+                                       <padding>
+                                          <Insets left="20.0" top="5.0" />
+                                       </padding>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <TableView fx:id="tableviewThanatopracteurs" prefHeight="200.0" prefWidth="200.0">
+                                 <columns>
+                                    <TableColumn fx:id="nomThanatopracteursColumn" prefWidth="130.0" text="Nom" />
+                                    <TableColumn fx:id="prenomThanatopracteursColumn" prefWidth="125.0" text="Prénom" />
+                                 </columns>
+                                 <VBox.margin>
+                                    <Insets bottom="15.0" right="45.0" top="10.0" />
+                                 </VBox.margin>
+                              </TableView>
+                           </children>
+                        </VBox>
+                        <Label layoutX="60.0" layoutY="508.0" text="Véhicule" GridPane.rowIndex="11">
+                           <font>
+                              <Font name="Inter Semi Bold" size="13.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets left="50.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <ComboBox fx:id="comboboxVehicule" prefWidth="255.0" promptText="Choisir un véhicule" style="-fx-background-color: white; -fx-border-color: grey; -fx-border-radius: 6;" GridPane.columnIndex="1" GridPane.rowIndex="11">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ComboBox>
+                        <Label text="Détails" GridPane.rowIndex="12">
+                           <GridPane.margin>
+                              <Insets left="50.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font name="Inter Semi Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="12">
+                           <children>
+                              <TextArea fx:id="taDetails" prefHeight="200.0" prefWidth="200.0" promptText="Plus d'informations...">
+                                 <VBox.margin>
+                                    <Insets right="45.0" />
+                                 </VBox.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="TEXT" />
+                                 </cursor>
+                              </TextArea>
+                           </children>
+                        </VBox>
+                        <Button fx:id="btnAnnuler" mnemonicParsing="false" onAction="#btnAnnulerClicked" prefHeight="50.0" prefWidth="103.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 6;" text="Annuler" GridPane.halignment="RIGHT" GridPane.rowIndex="13">
+                           <GridPane.margin>
+                              <Insets right="5.0" />
+                           </GridPane.margin>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button fx:id="btnEnregistrer" mnemonicParsing="false" onAction="#btnEnregistrerClicked" prefHeight="50.0" prefWidth="103.0" style="-fx-background-color: #0B5BB6; -fx-background-radius: 6;" text="Enregistrer" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="13">
+                           <GridPane.margin>
+                              <Insets left="5.0" />
+                           </GridPane.margin>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </GridPane>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </content>
+</ScrollPane>

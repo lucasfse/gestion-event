@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<ScrollPane prefHeight="704.0" prefWidth="624.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.uga.iut2.genevent.controleur.VisuObsequeControleur">
+   <content>
+      <AnchorPane prefHeight="702.0" prefWidth="600.0" style="-fx-background-color: white;">
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="750.0" prefWidth="600.0" style="-fx-background-color: white;">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" text="Obsèques">
+                     <VBox.margin>
+                        <Insets top="30.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="Inter Semi Bold" size="30.0" />
+                     </font>
+                  </Label>
+                  <GridPane prefHeight="697.0" prefWidth="600.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints maxHeight="38.0" minHeight="10.0" percentHeight="0.0" prefHeight="48.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="70.0" minHeight="10.0" percentHeight="0.0" prefHeight="48.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="70.0" minHeight="10.0" percentHeight="0.0" prefHeight="48.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="70.0" minHeight="10.0" percentHeight="0.0" prefHeight="48.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="70.0" minHeight="10.0" percentHeight="0.0" prefHeight="36.80000000000001" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="45.400000000000006" minHeight="10.0" percentHeight="0.0" prefHeight="48.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="50.19999999999999" minHeight="10.0" percentHeight="0.0" prefHeight="48.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="49.0" minHeight="10.0" percentHeight="0.0" prefHeight="48.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="107.0" minHeight="10.0" percentHeight="0.0" prefHeight="48.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="100.60000000000002" minHeight="10.0" percentHeight="0.0" prefHeight="48.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="87.39999999999998" minHeight="10.0" percentHeight="0.0" prefHeight="48.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="112.60000000000002" minHeight="10.0" prefHeight="90.19999999999999" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="170.60000000000002" minHeight="10.0" prefHeight="90.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <VBox.margin>
+                        <Insets top="30.0" />
+                     </VBox.margin>
+                     <children>
+                        <Label text="Marbriers" GridPane.halignment="LEFT" GridPane.rowIndex="8">
+                           <GridPane.margin>
+                              <Insets left="50.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font name="Inter Semi Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btnModifier" mnemonicParsing="false" onAction="#modifierButtonAction" prefHeight="50.0" prefWidth="103.0" style="-fx-background-color: #0B5BB6; -fx-background-radius: 6;" text="Modifier" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="12">
+                           <GridPane.margin>
+                              <Insets left="5.0" />
+                           </GridPane.margin>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button fx:id="btnSupprimer" mnemonicParsing="false" onAction="#supprimerButtonAction" prefHeight="50.0" prefWidth="103.0" style="-fx-border-color: #ff0000; -fx-background-color: #FFFFFF; -fx-border-radius: 6;" text="Supprimer" textFill="RED" GridPane.halignment="RIGHT" GridPane.rowIndex="12">
+                           <GridPane.margin>
+                              <Insets right="5.0" />
+                           </GridPane.margin>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Label text="N° de contrat">
+                           <GridPane.margin>
+                              <Insets left="50.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font name="Inter Semi Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label text="Porteurs" GridPane.rowIndex="9">
+                           <GridPane.margin>
+                              <Insets left="50.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font name="Inter Semi Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label text="Thanatopracteurs" GridPane.rowIndex="10">
+                           <GridPane.margin>
+                              <Insets left="50.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font name="Inter Semi Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label text="Détails" GridPane.rowIndex="11">
+                           <GridPane.margin>
+                              <Insets left="50.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font name="Inter Semi Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="11">
+                           <children>
+                              <Label fx:id="lbDetails" text="Label" />
+                           </children>
+                        </VBox>
+                        <Label text="Nom de l'événement" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets left="50.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font name="Inter Semi Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label text="Lieu" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets left="50.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font name="Inter Semi Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label text="Date" GridPane.rowIndex="3">
+                           <GridPane.margin>
+                              <Insets left="50.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font name="Inter Semi Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label text="Heure de début" GridPane.rowIndex="4">
+                           <GridPane.margin>
+                              <Insets left="50.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font name="Inter Semi Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label text="Heure de fin" GridPane.rowIndex="5">
+                           <GridPane.margin>
+                              <Insets left="50.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font name="Inter Semi Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label text="Assistant funéraire" GridPane.rowIndex="6">
+                           <GridPane.margin>
+                              <Insets left="50.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font name="Inter Semi Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label text="Maitre de cérémonie" GridPane.rowIndex="7">
+                           <GridPane.margin>
+                              <Insets left="50.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font name="Inter Semi Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="8">
+                           <children>
+                              <TextArea fx:id="taMarbrier" editable="false" prefHeight="200.0" prefWidth="200.0">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" top="5.0" />
+                                 </VBox.margin>
+                              </TextArea>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="9">
+                           <children>
+                              <TextArea fx:id="taPorteur" prefHeight="200.0" prefWidth="200.0">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" top="5.0" />
+                                 </VBox.margin>
+                              </TextArea>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="10">
+                           <children>
+                              <TextArea fx:id="taThanatopracteur" prefHeight="200.0" prefWidth="200.0">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" top="5.0" />
+                                 </VBox.margin>
+                              </TextArea>
+                           </children>
+                        </VBox>
+                        <Label fx:id="lbNumContrat" text="Label" GridPane.columnIndex="1" />
+                        <Label fx:id="lbLieu" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label fx:id="lbNomEvenement" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label fx:id="lbDate" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Label fx:id="lbHeureDebut" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <Label fx:id="lbHeureFin" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <Label fx:id="lbAssistantFuneraire" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                        <Label fx:id="lbMaitreCeremonie" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                     </children>
+                  </GridPane>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </content>
+</ScrollPane>
